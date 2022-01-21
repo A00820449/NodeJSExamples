@@ -1,7 +1,8 @@
-var axios = require("axios");
+const axios = require("axios");
 
-axios.get("https://reqres.in/api/users")
+async function main() {
+    const response = await axios.get("https://reqres.in/api/users");
+    console.log(response);
+}
 
-.then (function(response){
-    console.log(response.data)
-})
+main();
